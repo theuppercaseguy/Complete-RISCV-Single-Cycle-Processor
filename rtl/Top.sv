@@ -134,29 +134,31 @@ module TOP(
         .d(dataW_R)
     );
     
-    tracer tracer_ip (
-    .clk_i(clk),
-    .rst_ni(rst),
+    // The below code is for testing the processor on IP Tracer
     
-    .hart_id_i(32'b0),
+    // tracer tracer_ip (
+    // .clk_i(clk),
+    // .rst_ni(rst),
     
-    .rvfi_valid(RegWEn),
-    .rvfi_insn_t(inst_out),
-    .rvfi_rs1_addr_t(inst_out[19:15]),
-    .rvfi_rs2_addr_t(inst_out[24:20]),
-    .rvfi_rs1_rdata_t(dataR1),
-    .rvfi_rs2_rdata_t(dataR2),
-    .rvfi_rd_addr_t(inst_out[11:7]) ,
-    .rvfi_rd_wdata_t(dataW_R),
-    .rvfi_pc_rdata_t(pc_out), //curr
-    .rvfi_pc_wdata_t(pc_mux_out), //next
+    // .hart_id_i(32'b0),
     
-    .rvfi_mem_addr(0),
-    .rvfi_mem_rmask(0),
-    .rvfi_mem_wmask(0),
-    .rvfi_mem_rdata(0),
-    .rvfi_mem_wdata(0)
-    );
+    // .rvfi_valid(RegWEn),
+    // .rvfi_insn_t(inst_out),
+    // .rvfi_rs1_addr_t(inst_out[19:15]),
+    // .rvfi_rs2_addr_t(inst_out[24:20]),
+    // .rvfi_rs1_rdata_t(dataR1),
+    // .rvfi_rs2_rdata_t(dataR2),
+    // .rvfi_rd_addr_t(inst_out[11:7]) ,
+    // .rvfi_rd_wdata_t(dataW_R),
+    // .rvfi_pc_rdata_t(pc_out), //curr
+    // .rvfi_pc_wdata_t(pc_mux_out), //next
+    
+    // .rvfi_mem_addr(0),
+    // .rvfi_mem_rmask(0),
+    // .rvfi_mem_wmask(0),
+    // .rvfi_mem_rdata(0),
+    // .rvfi_mem_wdata(0)
+    // );
 
     
 endmodule
